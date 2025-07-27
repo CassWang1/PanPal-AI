@@ -1,0 +1,33 @@
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: var(--spacing-lg) auto;
+}
+
+.loading-spinner--small {
+  width: 20px;
+  height: 20px;
+  border-width: 3px;
+}
+
+.loading-spinner--medium {
+    width: 30px;
+    height: 30px;
+    border-width: 4px;
+}
+
+.loading-spinner--large {
+  width: 50px;
+  height: 50px;
+  border-width: 5px;
+}
+
+.loading-text {
+  margin-top: var(--spacing-md);
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  font-style: italic;
+} 

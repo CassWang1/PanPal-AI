@@ -1,0 +1,299 @@
+.admin-dashboard {
+  padding: var(--spacing-lg);
+  max-width: 900px;
+  margin: var(--spacing-lg) auto;
+  background-color: var(--color-surface);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.admin-dashboard h2 {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  color: var(--color-text-primary);
+}
+
+.admin-section {
+  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-lg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+}
+
+.admin-section h3 {
+  margin-top: 0;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-primary);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--spacing-sm);
+}
+
+.admin-add-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  align-items: flex-end;
+}
+
+.admin-add-form .form-group {
+  flex-grow: 1;
+  min-width: 200px;
+}
+
+.admin-add-form label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  font-weight: 600;
+}
+
+.admin-add-form select,
+.admin-add-form input[type="text"] {
+  width: 100%;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: var(--spacing-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-sm);
+  position: relative;
+}
+
+.admin-add-form select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: var(--spacing-lg);
+}
+
+.admin-add-form select::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: var(--spacing-sm);
+  transform: translateY(-70%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid var(--color-text-secondary);
+  pointer-events: none;
+}
+
+.admin-add-form select:focus,
+.admin-add-form input[type="text"]:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.3);
+}
+
+.admin-add-form button {
+  height: fit-content;
+  padding: calc(var(--spacing-sm) + 2px) var(--spacing-md);
+}
+
+.button--primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: white;
+}
+
+.button--primary:hover:not(:disabled) {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  color: white;
+}
+
+.common-ingredients-list .category-group {
+  margin-bottom: var(--spacing-lg);
+}
+
+.common-ingredients-list h4 {
+  margin-top: 0;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-secondary);
+  font-size: 1.1rem;
+}
+
+.ingredient-list-admin {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.ingredient-item-admin {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-background);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+}
+
+.ingredient-name-admin {
+  margin-right: var(--spacing-sm);
+}
+
+.delete-button-admin {
+  background: transparent;
+  border: none;
+  color: var(--color-error);
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 1;
+  padding: 0 var(--spacing-xs);
+  margin-left: auto;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.delete-button-admin:hover:not(:disabled) {
+  opacity: 1;
+}
+
+.delete-button-admin:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.delete-button-admin .loading-spinner {
+    width: 16px;
+    height: 16px;
+    border-width: 2px;
+    border-left-color: var(--color-error);
+    margin: 0;
+}
+
+.empty-category-message {
+    font-style: italic;
+    color: var(--color-text-secondary);
+}
+
+.user-management {
+  margin-top: var(--spacing-xl);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+.user-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.user-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px solid var(--color-border-light);
+  gap: var(--spacing-md);
+}
+
+.user-content-wrapper {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    flex-grow: 1;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-username {
+  font-weight: 500;
+  color: var(--color-text-primary);
+  margin-right: 8px;
+}
+
+.user-tag {
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.user-tag--admin {
+  background-color: var(--color-info-light);
+  color: var(--color-info-dark);
+}
+
+.user-tag--banned {
+  background-color: var(--color-warning-light);
+  color: var(--color-warning-dark);
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.user-action-error {
+    color: var(--color-error);
+    font-size: 0.8rem;
+    margin-left: var(--spacing-xs);
+}
+
+.user-actions .button--small {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: 0.8rem;
+    min-width: 60px;
+    transition: all 0.2s ease;
+}
+
+.user-actions .button--success {
+    background-color: var(--color-success);
+    border-color: var(--color-success);
+    color: white;
+}
+.user-actions .button--success:hover:not(:disabled) {
+    background-color: var(--color-success-dark);
+    border-color: var(--color-success-dark);
+    color: white;
+}
+
+.user-actions .button--danger {
+    background-color: var(--color-error);
+    border-color: var(--color-error);
+    color: white;
+}
+.user-actions .button--danger:hover:not(:disabled) {
+    background-color: #b02a37;
+    border-color: #b02a37;
+    color: white;
+}
+
+.user-registration-info {
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+    white-space: nowrap;
+}
+
+.user-registered-at {
+    font-weight: 500;
+}
+
+.user-duration {
+    font-style: italic;
+    margin-left: var(--spacing-xs);
+}
+
+.user-item:last-child {
+  border-bottom: none;
+}
+
+.user-item--banned .user-username {
+    text-decoration: line-through;
+    color: var(--color-text-secondary);
+} 

@@ -1,0 +1,71 @@
+.community-page {
+  padding: var(--spacing-lg);
+  max-width: 1100px;
+  margin: var(--spacing-lg) auto;
+}
+
+.community-page h2 {
+  text-align: center;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text-primary);
+}
+
+.community-description {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    color: var(--color-text-secondary);
+    font-size: 1.1rem;
+}
+
+.community-controls {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+    gap: var(--spacing-sm);
+}
+
+.community-controls label {
+    font-weight: 500;
+    color: var(--color-text-secondary);
+}
+
+.sort-select {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    background-color: var(--color-surface);
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.sort-select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.3);
+}
+
+.community-recipes-list {
+  column-count: 2;
+  column-gap: var(--spacing-lg);
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .community-recipes-list {
+    column-count: 1;
+  }
+}
+
+.community-recipes-list > * {
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+.no-recipes-message {
+    text-align: center;
+    font-style: italic;
+    color: var(--color-text-secondary);
+    margin-top: var(--spacing-xl);
+    font-size: 1.1rem;
+}

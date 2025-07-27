@@ -1,0 +1,145 @@
+.community-recipe-card-wrapper {
+  /* Wrapper to potentially add extra spacing or borders around the base card */
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  background-color: var(--color-surface);
+  transition: box-shadow 0.2s ease;
+  margin-bottom: var(--spacing-lg); /* Add margin between cards */
+  /* Display as flex column to ensure order */
+  display: flex;
+  flex-direction: column; 
+  /* Added for column layout */
+  break-inside: avoid; 
+  page-break-inside: avoid; 
+}
+
+.community-recipe-card-wrapper:hover {
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* New header style for user info */
+.community-card-header-info {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-bottom: 1px solid var(--color-border);
+    background-color: var(--color-background);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    display: flex; 
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.community-card-header-info .sharer-info strong {
+    color: var(--color-text-primary);
+    font-weight: 600;
+}
+
+.community-card-header-info .shared-date {
+    font-style: italic;
+    white-space: nowrap; /* Prevent date wrapping */
+}
+
+/* Standalone note style */
+.shared-note-standalone {
+    font-style: italic;
+    border-left: 4px solid var(--color-primary);
+    margin: var(--spacing-md) var(--spacing-lg);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--color-background);
+    border-radius: var(--border-radius); 
+    color: var(--color-text-primary);
+}
+
+/* Styles specific to the community metadata section INSIDE RecipeCard */
+.community-meta {
+  margin-bottom: var(--spacing-sm);
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+.community-meta .sharer-info {
+  display: block;
+}
+
+.community-meta .sharer-info strong {
+    color: var(--color-text-primary);
+    font-weight: 600;
+}
+
+.community-meta .shared-date {
+  font-style: italic;
+}
+
+/* Footer for likes/comments below the main RecipeCard */
+.community-card-footer {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-top: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space out like button and count */
+    font-size: 0.9rem;
+    background-color: var(--color-background);
+    /* Apply bottom radius matching the wrapper */
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.like-count {
+    color: var(--color-text-secondary);
+    font-weight: 500;
+}
+
+.like-button {
+    /* Inherit base button styles or use button--outline */
+    background-color: transparent;
+    border: 1px solid var(--color-primary-dark);
+    color: var(--color-primary-dark);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: 15px; /* Pill shape */
+    font-size: 0.85rem;
+    min-width: 70px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.like-button:hover:not(:disabled) {
+    background-color: rgba(56, 142, 60, 0.1);
+    border-color: #2e7d32;
+    color: #2e7d32;
+}
+
+.like-button.liked {
+    /* Styles when liked */
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: white;
+}
+
+.like-button.liked:hover:not(:disabled) {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+}
+
+.like-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.like-button .loading-spinner {
+    width: 16px;
+    height: 16px;
+    border-width: 2px;
+    /* Adjust color based on liked state if needed */
+    border-left-color: var(--color-primary-dark); 
+    margin: 0;
+}
+
+.like-button.liked .loading-spinner {
+    border-left-color: white;
+}
+
+.like-error {
+    color: var(--color-error);
+    font-size: 0.8rem;
+    margin-left: var(--spacing-sm);
+} 
